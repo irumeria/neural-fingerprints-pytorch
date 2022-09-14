@@ -1,7 +1,7 @@
 from rdkit.Chem import MolFromSmiles
 import numpy as np
 
-from neural_fingerprints.features import atom_features, bond_features
+from .features import atom_features, bond_features
 
 degrees = [0, 1, 2, 3, 4, 5]
 

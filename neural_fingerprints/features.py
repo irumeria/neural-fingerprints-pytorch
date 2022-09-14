@@ -1,7 +1,6 @@
 import numpy as np
 from rdkit import Chem
 
-
 def atom_features(atom):
     return np.array(list(one_of_k_encoding_unk(atom.GetSymbol(),
                                                ['C', 'N', 'O', 'S', 'F', 'Si', 'P', 'Cl', 'Br', 'Mg', 'Na',

@@ -1,8 +1,8 @@
 from torch import nn
 import torch
 import torch.nn.functional as F
-from neural_fingerprints.features import num_atom_features,num_bond_features
-from neural_fingerprints.mol_graph import degrees, graph_from_smiles_tuple
+from .features import num_atom_features,num_bond_features
+from .mol_graph import degrees, graph_from_smiles_tuple
 
 def sum_and_stack(features, idxs_list_of_lists):
     sum_list = [torch.sum(features[idx_list], axis=0)
