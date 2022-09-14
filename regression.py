@@ -72,7 +72,7 @@ def main():
                        'fp_length': model_params['fp_length'], 'normalize': 1}
 
         model_fp = NeuralConvNetwork(**conv_params)
-        model_deep = DeepNetwork(net_params)
+        model_deep = DeepNetwork(**net_params)
 
         device = torch.device("cuda:0" if (
             torch.cuda.is_available()) else "cpu")

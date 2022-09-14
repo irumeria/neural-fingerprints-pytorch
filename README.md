@@ -13,7 +13,7 @@ from neural_fingerprints.convnet import NeuralConvNetwork
 from neural_fingerprints.deepnet import DeepNetwork
 
 model_fp = NeuralConvNetwork(**conv_params)
-model_deep = DeepNetwork(ann_params)
+model_deep = DeepNetwork(**ann_params)
 
 ```
 + the params for network incloud these contents, which is familiar with those by HIPS:
