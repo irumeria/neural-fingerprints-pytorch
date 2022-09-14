@@ -2,7 +2,7 @@
 
 ## Description
 Pytorch implementation of [Convolutional Networks on Graphs for Learning Molecular Fingerprints][NGF-paper]. Generate data-driven Molecular Fingerprints from SMILES.
-
+<img src="./assets/neural_fingerprints.jpg"/>
 
 ## Usage
 [regression.py](regression.py) is an example script to do regression work using neural fingerprints.

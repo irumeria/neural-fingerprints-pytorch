@@ -72,6 +72,7 @@ def main():
 
         model_fp = NeuralConvNetwork(**conv_params)
         model_deep = DeepNetwork(**net_params)
+        print(model_fp)
 
         device = torch.device("cuda:0" if (
             torch.cuda.is_available()) else "cpu")
