@@ -1,7 +1,7 @@
 # Neural-Fingerprints-Pytorch
 
 ## Description
-Pytorch implementation of [Convolutional Networks on Graphs for Learning Molecular Fingerprints][NGF-paper].
+Pytorch implementation of [Convolutional Networks on Graphs for Learning Molecular Fingerprints][NGF-paper]. Generate data-driven Molecular Fingerprints from SMILES.
 
 
 ## Usage
@@ -24,10 +24,7 @@ conv_params = {
     conv_width=20,   # node numbers of hidden layer
     h1_size=100
 }
-train_params = {
-    num_iters=100,  
-    batch_size=100
-}
+
 ann_params = {
     layer_sizes=[model_params['fp_length'], 
     model_params['h1_size']],
