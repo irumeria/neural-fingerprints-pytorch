@@ -88,7 +88,6 @@ class NeuralConvNetwork(nn.Module):
         logits = torch.sum(torch.stack(all_layer_fps),dim=0)
         return logits
 
-# @memoize
 def array_rep_from_smiles(smiles):
     molgraph = graph_from_smiles_tuple(smiles)
     arrayrep = {'atom_features': torch.from_numpy(molgraph.feature_array('atom')).float(),

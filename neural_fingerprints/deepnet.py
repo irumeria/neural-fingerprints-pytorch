@@ -15,7 +15,6 @@ class DeepNetwork(nn.Module):
             self.linears.append(nn.Linear(in_size,out_size))
         
     def forward(self, x):
-        # logits = x
         for layer_index in range(len(self.layer_sizes) - 1):
             x = self.linears[layer_index](x)
             if layer_index < len(self.layer_sizes) - 2:

@@ -37,7 +37,7 @@ ann_params = {
 
 
 ## Other implementations
- - by [HIPS][1] using autograd
+ - by [HIPS][1] using autograd, the direct reference for writing these script
  - by [debbiemarkslab][2] using theano
  - by [keiserlab][3] using keras
  - by [DeepChem][4] using tensorflow
