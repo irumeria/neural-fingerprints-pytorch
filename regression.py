@@ -1,6 +1,5 @@
 # Example regression script using neural fingerprints.
 
-import numpy as np
 import torch
 from torch import nn
 import torch.nn.functional as F
@@ -57,7 +56,7 @@ def get_ith_minibatch_ixs(i, num_datapoints, batch_size):
 
 def main():
     print("Loading data...")
-    traindata, valdata, testdata = load_data(
+    traindata, valdata, _testdata = load_data(
         task_params['data_file'], (N_train, N_val, N_test),
         input_name='smiles', target_name=task_params['target_name'])
 
@@ -89,7 +88,6 @@ def main():
         val_targets = torch.from_numpy(val_targets).to(device)
 
         for iter in range(train_params['num_iters']):
-
             
             batch_index = 0
             num_datapoints = len(train_inputs)
@@ -117,7 +115,6 @@ def main():
                 pred = undo_norm(model_total(val_inputs))
                 print("iter", str(iter), "finished")
                 print("val loss:", F.mse_loss(pred,val_targets).item())
-
 
     print("Task params", task_params)
     print("Starting neural fingerprint experiment...")
