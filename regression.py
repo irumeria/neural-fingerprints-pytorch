@@ -6,6 +6,7 @@ import torch.nn.functional as F
 from neural_fingerprints.io_utils import load_data
 from neural_fingerprints.convnet import NeuralConvNetwork
 from neural_fingerprints.deepnet import DeepNetwork
+from neural_fingerprints.convnet_v2 import NeuralConvNetwork_v2
 
 task_params = {'target_name': 'measured log solubility in mols per litre',
                'data_file': 'delaney.csv'}
@@ -70,9 +71,11 @@ def main():
         conv_params = {'num_hidden_features': conv_layer_sizes,
                        'fp_length': model_params['fp_length'], 'normalize': 1}
 
-        model_fp = NeuralConvNetwork(**conv_params)
+        # model_fp = NeuralConvNetwork(**conv_params)
+        model_fp = NeuralConvNetwork_v2(**conv_params)
         model_deep = DeepNetwork(**net_params)
         print(model_fp)
+        print(model_deep)
 
         device = torch.device("cuda:0" if (
             torch.cuda.is_available()) else "cpu")
